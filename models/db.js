@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-require('dotenv').config();
 
 exports.connect = () => {
     mongoose.connect("mongodb+srv://Dbuser:deepak2002@cluster0.eylfl.mongodb.net/GeoLoc?retryWrites=true&w=majority",{

@@ -3,7 +3,7 @@ var router = express.Router();
 var stores = require('../controller/store');
 
 router.post('/storeLoc', function(req,res) {
-    var username = req.body.username || req.query.username;
+    var username = req.body.mobile || req.query.mobile;
     var latitude = req.body.lat || req.query.lat;
     var longitude = req.body.lon || req.query.lon;
     console.log(latitude,longitude);
@@ -14,7 +14,7 @@ router.post('/storeLoc', function(req,res) {
     }))
     {
         console.log("created");
-        res.send("Created");
+        res.redirect('/error');
     }
     else{
     console.log("err");

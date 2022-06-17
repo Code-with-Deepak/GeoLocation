@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-require('dotenv').config();
 var index = require('./routes/index');
 var db = require('./models/db').connect();
 var storeDb = require('./routes/store');
