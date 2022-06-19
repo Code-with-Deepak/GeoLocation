@@ -31,10 +31,9 @@ function showPosition(position) {
 }
 
 function showError(error) {
-  switch(error.code) {
-    case error.PERMISSION_DENIED:
-      x.innerHTML = "User denied the request for Geolocation."
-      navigator.geolocation;
+  if(error.PERMISSION_DENIED)
+  {
+    alert("Enable location to place Your order");
   }
 }
 </script>
